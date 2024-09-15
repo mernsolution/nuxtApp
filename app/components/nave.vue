@@ -12,10 +12,7 @@
             <nav>
               <ul class="flex list-style-none">
                 <li class="item-center">
-                  <NuxtLink to="/" class="px-2"> home</NuxtLink>
-                </li>
-                <li class="item-center">
-                  <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
+                  <NuxtLink to="/homePage" class="px-2"> home</NuxtLink>
                 </li>
                 <li class="item-center">
                   <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
@@ -63,10 +60,7 @@
         <nav>
           <ul class="list-style-none pt-6">
             <li class="item-center">
-              <NuxtLink to="/" class="px-2"> home</NuxtLink>
-            </li>
-            <li class="item-center">
-              <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
+              <NuxtLink to="/homePage" class="px-2"> home</NuxtLink>
             </li>
             <li class="item-center">
               <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
