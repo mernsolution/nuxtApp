@@ -1,41 +1,42 @@
 <template>
   <nav class="bg-red shadow-sm">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-18 pt-8 pb-5">
-        <div class="flex">
-          <NuxtLink
-            class="flex text-xl font-bold text-gray-800 hover:text-gray-600 pr-5"
-          >
+      <!-- Flex container -->
+      <div class="flex justify-between items-center h-18 pt-8 pb-5">
+        <!-- Left side: Logo -->
+        <div class="flex items-center">
+          <NuxtLink class="flex text-xl font-bold text-gray-800 hover:text-gray-600 pr-5">
             My Logo
           </NuxtLink>
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <nav>
-              <ul class="flex list-style-none">
-                <li class="item-center">
-                  <NuxtLink to="/homePage" class="px-2"> home</NuxtLink>
-                </li>
-                <li class="item-center">
-                  <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
-                </li>
-                <li class="item-center">
-                  <NuxtLink to="/contactPage" class="px-2">
-                    contact page</NuxtLink
-                  >
-                </li>
-                <li class="item-center">
-                  <NuxtLink to="/servicePage" class="px-2">
-                    service page</NuxtLink
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
         </div>
 
-        <div class="hidden sm:ml-6 sm:flex sm:items-center">
-          <NuxtLink to="/servicePage">login</NuxtLink>
-          <NuxtLink to="/servicePage" class="mx-2 px-3 py-1 bg-blue-600 rounded text-white"> sign-up</NuxtLink>
+        <!-- Centered Menu -->
+        <div class="hidden sm:flex sm:space-x-8 justify-center w-full">
+          <nav>
+            <ul class="flex justify-center space-x-4 list-style-none">
+              <li>
+                <NuxtLink to="/homePage" class="px-2">home</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/aboutPage" class="px-2">about</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/contactPage" class="px-2">contact page</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/servicePage" class="px-2">service page</NuxtLink>
+              </li>
+            </ul>
+          </nav>
         </div>
+
+        <!-- Right side: Login and Sign-up -->
+        <div class="hidden sm:flex sm:items-center">
+          <NuxtLink to="/servicePage">login</NuxtLink>
+          <NuxtLink to="/servicePage" class="mx-4 px-5 py-1 bg-blue-600 rounded text-white">signup</NuxtLink>
+        </div>
+
+        <!-- Mobile menu button -->
         <div class="-mr-2 flex items-center sm:hidden">
           <button @click="toggleMenu">
             <svg
@@ -56,20 +57,22 @@
           </button>
         </div>
       </div>
+
+      <!-- Mobile menu -->
       <div v-if="isOpen" class="sm:hidden">
         <nav>
           <ul class="list-style-none pt-6">
-            <li class="item-center">
-              <NuxtLink to="/homePage" class="px-2"> home</NuxtLink>
+            <li>
+              <NuxtLink to="/homePage" class="px-2">home</NuxtLink>
             </li>
-            <li class="item-center">
-              <NuxtLink to="/aboutPage" class="px-2"> about</NuxtLink>
+            <li>
+              <NuxtLink to="/aboutPage" class="px-2">about</NuxtLink>
             </li>
-            <li class="item-center">
-              <NuxtLink to="/contactPage" class="px-2"> contact page</NuxtLink>
+            <li>
+              <NuxtLink to="/contactPage" class="px-2">contact page</NuxtLink>
             </li>
-            <li class="item-center">
-              <NuxtLink to="/servicePage" class="px-2"> service page</NuxtLink>
+            <li>
+              <NuxtLink to="/servicePage" class="px-2">service page</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -77,9 +80,6 @@
     </div>
   </nav>
 </template>
-
-
-
 
 <script>
 export default {
@@ -96,3 +96,4 @@ export default {
   },
 };
 </script>
+
